@@ -1,0 +1,37 @@
+<template>
+    <lightning-card title="HTML TABLE">
+        <lightning-combobox
+        name="APplicant Gender"
+        label="Select Applicant Gender"
+        value={value}
+        placeholder="Select Gender"
+        options={appliGenderOption}
+        onchange={apppliGenderHandleChange} ></lightning-combobox><br>
+
+        <template if:true={tableFlagShower}>
+            
+        Total Record = {genderListTotalValueShow}
+
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+               <tr>
+                 <th scope="col"><span class="slds-truncate">First Name</span></th>
+                 <th scope="col"><span class="slds-truncate">Last Name</span></th>
+                 <th scope="col"><span class="slds-truncate">Gender</span></th>
+                </tr>
+            </thead>
+
+          <tbody>
+            <template for:each={genderListCollector} for:item="genderForItem">
+                <tr key={genderForItem.Id}>
+                    <td>{genderForItem.First_Name__c}</td>
+                    <td>{genderForItem.Last_Name__c}</td>
+                    <td>{genderForItem.Gender__c}</td>
+                </tr>
+            </template>
+          </tbody>
+
+        </table>
+    </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+ <lightning-card>
+    <template if:true={pokemon.data}>
+        <lightning-record-form
+        object-api-name="Contact"
+        record-id={trainerId}
+        layout-type="Compact">
+        </lightning-record-form>
+    </template>
+ </lightning-card>
+</template>

@@ -1,0 +1,96 @@
+<!-- settingsViewLWC.html -->
+<template>
+    <lightning-card title="Settings">
+        <!-- Call Reminder Section -->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Call Reminder</p>
+                <p class="small-text">Set up a follow-up call after the call is ended</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-input type="toggle" checked={isCallReminderToggleChecked} onchange={handleCallReminderToggleChange}></lightning-input>
+            </div>
+        </div>
+
+        <!-- Global Connect Section -->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">After Call Work</p>
+                <p class="small-text">This enables you to take notes right after. the call and set the duration as well</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-input type="toggle" checked={isGlobalConnectToggleChecked} onchange={handleGlobalConnectToggleChange}></lightning-input>
+            </div>
+        </div>
+
+        <!-- After Call Work Section -->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Global Connect</p>
+                <p class="small-text">While calling, it allows you to see the date and time of the calling country</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-input type="toggle" checked={isAfterCallToggleChecked} onchange={handleAfterCallToggleChange}></lightning-input>
+            </div>
+        </div>
+
+        <!--Last Call Details Section-->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Last Call Details</p>
+                <p class="small-text">Allow you to see the last interaction with the caller</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-input type="toggle" checked={isLastCallToggleChecked} onchange={handleLastCallToggleChange}></lightning-input>
+            </div>
+        </div>
+
+        <!--Show IVR input Section-->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Show IVR Input</p>
+                <p class="small-text">Display IVR Input events when call received through IVR</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-input type="toggle" checked={isShowIvrToggleChecked} onchange={handleShowIvrToggleChange}></lightning-input>
+            </div>
+        </div>
+
+
+        <!--Default Number Section-->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Default Number</p>
+                <p class="small-text">If you have allocated multiple numbers, this 
+                  allow you to set the default number to make callse.</p>
+            </div>
+
+            <div class="setup-container">
+                <lightning-button-icon icon-name="utility:chevronright" onclick={handleDefaultNumClick}></lightning-button-icon>
+            </div>
+        </div>
+
+       
+       <!--Default country code-->
+        <div class="section-container">
+            <div class="reminder-container">
+                <p class="big-text">Default country code</p>
+                <p class="small-text">Add a country code before the number for your call to connect</p>
+            </div>
+
+            <div class="setup-container">
+               <lightning-combobox
+                name="progress"
+                value={value}
+                placeholder="None"
+                options={options}
+                onchange={handleCountryCodeChange}></lightning-combobox>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+:host{
+    display:inline-block;
+    background-color: green;
+    color:chocolate
+}   
+/* newhost is a class name*/
+:host(.newhost){
+    display:ruby;
+    background-color: green;
+    color:silver
+}

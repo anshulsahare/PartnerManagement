@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="CRUD Account">
+        <lightning-button variant="Brand" icon-name="utility:record_create" label="Create" onclick={createHandler}></lightning-button> &nbsp;
+        <lightning-button variant="Neutral" icon-name="utility:search" label="Search" onclick={searchHandler}></lightning-button> &nbsp;
+        <lightning-button variant="Success" icon-name="utility:record_update" label="Update" onclick={updateHandler}></lightning-button> &nbsp;
+        <lightning-button variant="Destructive" icon-name="utility:delete" label="Delete" onclick={deleteHandler}></lightning-button> &nbsp; <br/>
+
+        <lightning-input data-formfield="accountName" type="text" label="enter account name"></lightning-input><br/>
+        <lightning-combobox
+            name="accountType"
+            label="select account type"
+            value={accountObject.Type}
+            placeholder="Select Type"
+            options={typeoption}
+            onchange={handleTypeChange} ></lightning-combobox><br/>
+
+            <lightning-combobox
+            name="accountSLA"
+            label="select account SLA"
+            value={accountObject.SLA__c}
+            placeholder="Select SLA"
+            options={slaoption}
+            onchange={handleSlaChange} ></lightning-combobox><br/>
+
+            <lightning-button variant="Success"  label="Save" onclick={firstSaveHandler}></lightning-button> &nbsp;&nbsp;&nbsp;
+            <lightning-button variant="Brand"  label="Create" onclick={secondCreateHandler}></lightning-button> &nbsp;&nbsp;&nbsp;
+            <lightning-button variant="Success"  label="Save" onclick={thirdSaveHandler}></lightning-button><br/>
+
+    </lightning-card>
+</template>

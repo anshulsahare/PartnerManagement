@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Account_Record</fullName>
+    <active>false</active>
+    <errorConditionFormula>or( ISPICKVAL( Rating , &apos;hot&apos;) , ISPICKVAL( Rating , &apos;warm&apos;) )</errorConditionFormula>
+    <errorMessage>check the rating of hot and warm</errorMessage>
+</ValidationRule>

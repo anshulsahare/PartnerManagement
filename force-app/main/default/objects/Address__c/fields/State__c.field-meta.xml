@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State__c</fullName>
+    <externalId>false</externalId>
+    <label>State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Country__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>State</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>brazil</controllingFieldValue>
+            <controllingFieldValue>south africa</controllingFieldValue>
+            <valueName>daman</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>brazil</controllingFieldValue>
+            <controllingFieldValue>south africa</controllingFieldValue>
+            <valueName>diu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>India</controllingFieldValue>
+            <valueName>Maharashtra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>USA</controllingFieldValue>
+            <valueName>Goa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Shrilnaka</controllingFieldValue>
+            <valueName>Punjab</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>China</controllingFieldValue>
+            <valueName>Hariyana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nepal</controllingFieldValue>
+            <controllingFieldValue>Bhutan</controllingFieldValue>
+            <valueName>Delhi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>tohoku</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Japan</controllingFieldValue>
+            <valueName>armouri</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>west indies</controllingFieldValue>
+            <valueName>eastern cape</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>west indies</controllingFieldValue>
+            <valueName>free state</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>west indies</controllingFieldValue>
+            <controllingFieldValue>england</controllingFieldValue>
+            <valueName>cornwall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>england</controllingFieldValue>
+            <valueName>london</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

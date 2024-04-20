@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="Player Search Result">
+      <lightning-layout multiple-rows="true">
+         <template for:each={cricketerDataStorer} for:item="player">
+           <lightning-layout-item size="3" key={player.Id} padding="around-small" class="slds-align_absolute-center"> 
+             
+             <!-- Three dots icon for update options -->
+                <div class="icon">
+                    <lightning-icon icon-name="utility:threedots_vertical" size="x-small" alternative-text="Options" onclick={handleOptionsClick} data-id={player.Id}></lightning-icon>
+                </div>
+
+           <div class="title warpper" onclick={handleClickPlayerCard} data-id={player.Id}  data-cricketer-name={player.Cricketer_Name__c}>
+              
+                
+
+                 <!--Image section-->
+                <div class="title">
+                  <img src={player.Image_url__c}/>
+                </div>
+               
+             
+               <!--Name & other-->
+             <div class="playerdata">
+               <h1><b>Name        : {player.Cricketer_Name__c}</b></h1>
+                   <p>Nationality : {player.Nationality__c}</p>
+                   <p>Runs        : {player.Run__c} </p>
+                   <p>Age         : {player.Age__c} </p>
+             </div>
+
+
+             </div>
+             
+           </lightning-layout-item>
+         </template>
+      </lightning-layout>
+    </lightning-card>
+
+ <!-- Update Popup -->
+    <div if:true={showUpdatePopup} class="update-popup">
+        <div class="popup-content">
+            <lightning-input label="Name" value={updatedPlayerName} onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Runs" value={updatedRuns} type="number" onchange={handleRunsChange}></lightning-input>
+            <div class="popup-buttons">
+                <lightning-button label="Save" variant="brand" onclick={handleSave}></lightning-button>
+                <lightning-button label="Cancel" onclick={handleCancel}></lightning-button>
+            </div>
+        </div>
+    </div>
+
+</template>

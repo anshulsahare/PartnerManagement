@@ -1,0 +1,70 @@
+<template>
+    <lightning-card title="Acccout Related Contact">
+    <div>
+      <template if:true={acclist}>
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <tr class="slds-line-height_reset">
+            <th class="" scope="col">
+              <div class="slds-truncate" title="ICON">
+                <lightning-button
+                  icon-name="utility:bug"
+                  class="button__icon_small slds-button"
+                ></lightning-button>
+              </div>
+            </th> 
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Name">Name</div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Name">Phone</div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Name">Email</div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Name">Kid</div>
+            </th>
+          </tr>
+          <tbody>
+            <template for:each={acclist} for:item="item" for:index="index">
+              <tr key={item.Id}>
+                <th>
+                  <!-- {index}   -->
+                  <div class="slds-truncate" title="ICON">
+                    <lightning-button
+                      
+                      name={item.Id}
+                      icon-name="utility:right"
+                      class="button__icon_small slds-button"
+                      onclick={handleClick}
+                    ></lightning-button>
+                  </div>
+                </th>
+                <td>{item.Name}</td>
+                <td>{item.Phone}</td>
+                <td>""</td>
+              </tr>
+
+              <template if:true={showRelatedContacts}>
+                <template if:true={filteredConList}>
+                  <template
+                    for:each={filteredConList}
+                    for:item="itemCon"
+                    for:index="con"
+                  >
+                    <tr key={itemCon.Id}>
+                      <td>{con}</td>
+                      <td>{itemCon.Name}</td>
+                      <td>{itemCon.Phone}</td>
+                      <td>{itemCon.Email}</td>
+                    </tr>
+                  </template>
+                </template>
+              </template>
+            </template>
+          </tbody>
+        </table>
+      </template>
+    </div>
+  </lightning-card>
+</template>

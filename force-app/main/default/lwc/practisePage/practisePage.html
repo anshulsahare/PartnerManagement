@@ -1,0 +1,30 @@
+<template>
+    <lightning-card>
+      <div class="slds-text-heading_large slds-align_absolute-center" >Create Multipl Account</div>
+      <div>
+        <table>
+          <thead>
+           <tr>
+             <td>First Name</td>
+             <td>Last Name</td>
+             <td>Email</td>
+             <td>Gender</td>
+             <td><lightning-button variant="nuetral" icon-name="utility:add" title="add new contact" class="slds-m-left_xx-small" onclick={handleAddRecord} ></lightning-button></td>
+           </tr>
+          </thead>
+          <tbody>
+             <template for:each={contacts} for:item="con">
+              <tr key={con.tempId}>
+                <td><lightning-input type="text"  placeholder="Enter your name"></lightning-input></td>
+                <td><lightning-input type="text" placeholder="Enter your name"></lightning-input></td>
+                <td><lightning-input type="email"  placeholder="Enter your Email"></lightning-input></td>
+                <td><lightning-combobox name="progress" value={selectedGenderValue} placeholder="Select Gender" options={genderOption} onchange={handleChangeGender}></lightning-combobox></td>
+                <td><lightning-button variant="neutral" icon-name="utility:delete" class="slds-m-left_xx-small" onclick={handleDeleteClick} data-temp-id={con.tempId}></lightning-button></td>
+              </tr>
+             </template>
+          </tbody>
+        </table>
+      </div>
+      <div class="slds-text-align_right"><lightning-button variant="brand" label="Save" onclick={saveHandlerButton}></lightning-button></div>
+    </lightning-card>
+</template>

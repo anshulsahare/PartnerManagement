@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_number_format</fullName>
+    <active>false</active>
+    <errorConditionFormula>NOT(REGEX( Phone_Number__c , &quot;[7-9]{2}[0-9]{7}&quot;) )</errorConditionFormula>
+    <errorDisplayField>Phone_Number__c</errorDisplayField>
+    <errorMessage>first two number beetween 7-9 and remaining 0-9</errorMessage>
+</ValidationRule>

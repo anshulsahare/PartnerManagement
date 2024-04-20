@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="From Date To Today Date Form">
+        <lightning-input type="Date" data-formfield="fromDatelabel" label="Applicant from Date"></lightning-input><br>
+        <lightning-input type="Date" data-formfield="todayDatelabel" label="Applicant Today Date"></lightning-input><br>
+        <lightning-button variant="Brand" label="Search" icon-name="utility:search" onclick={searchHanlderButton}></lightning-button><br>
+ 
+        <template if:true={showTableFlaf}>
+        <table class="slds-table slds-table--bordered slds-table--striped">
+            <thead>
+               <tr>
+                 <th scope="col"><span class="slds-truncate">First Name</span></th>
+                 <th scope="col"><span class="slds-truncate">Last Name</span></th>
+                 <th scope="col"><span class="slds-truncate">Gender</span></th>
+                 <th scope="col"><span class="slds-truncate">DOB</span></th>
+                 <th scope="col"><span class="slds-truncate">Email</span></th>
+                </tr>
+            </thead>
+
+          <tbody>
+            <template for:each={dateListCollector} for:item="DOBitem">
+                <tr key={DOBitem.Id}>
+                    <td>{DOBitem.First_Name__c}</td>
+                    <td>{DOBitem.Last_Name__c}</td>
+                    <td>{DOBitem.Gender__c}</td>
+                    <td>{DOBitem.DOB__c}</td>
+                    <td>{DOBitem.Emaild_Id__c}</td>
+                </tr>
+            </template>
+          </tbody>
+
+        </table>
+    </template>
+
+    </lightning-card>
+</template>

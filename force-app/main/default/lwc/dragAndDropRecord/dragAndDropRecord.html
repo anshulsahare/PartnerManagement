@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="GFetch Record">
+        <template for:each={accountStorer.data} for:item="acc">
+            <p key={acc.Id}>{acc.name}</p>
+        </template>
+    </lightning-card>
+</template>

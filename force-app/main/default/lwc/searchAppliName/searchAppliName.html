@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Search Applicant Records">
+        Total Number Record Retrived = <br>
+    <lightning-button variant="destructive" label="Delete" icon-name="utility:delete" onclick={deleteHandlerButton}></lightning-button><br>
+    <lightning-input type="search" label="Enter Applicant Name" data-formfield="accName" onkeyup={searchButtonHandler}></lightning-input><br>
+
+
+    <template if:true={showDataTableFlag}>
+        <lightning-datatable
+                key-field="id"
+                data={listStoredVariable}
+                columns={columns}>
+        </lightning-datatable>
+    </template>
+   
+
+    </lightning-card>
+</template>

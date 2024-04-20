@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="pokemon card">
+        <lightning-input type="search" placeholder="Search Pokemon by name" onchange={serachPokemonHandler}></lightning-input>
+        <lightning-layout multiple-rows="true">
+             <template for:each={pokemon} for:item="pokemonData">
+                <lightning-layout-item key={pokemonData.Id} size="3" class="slds-var-p-around_x-small">
+
+                    <!-- pokemon card start here -->
+                    <lightning-card title={pokemonData.Name} class="pokemon_card">
+
+                    <div class="slds-var-p-horizontal_small">
+                      <div class="slds-grid slds-wrap">
+
+                        <div class="slds-col slds-size_8-of-12">
+                            <img src={pokemonData.Image_url__c} class="pokemonImg"/>
+                        </div>
+
+                        <div class="slds-col slds-size_4-of-12">
+                            <p class="slds-var-m-bottom_xx-small"><strong>{pokemonData.Trainer__r.Name}</strong></p>
+                            <p class="slds-var-m-bottom_xx-small">{pokemonData.Height__c}</p>   
+                            <p class="slds-var-m-bottom_xx-small">{pokemonData.Weight__c}</p>
+                        </div>
+
+                     </div>
+                    </div>
+
+                    </lightning-card>
+                      <!-- pokemon card end here -->
+
+                </lightning-layout-item>
+             </template>
+        </lightning-layout>
+    </lightning-card>
+</template>

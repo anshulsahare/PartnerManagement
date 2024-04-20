@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Registration form">
+      
+      <div class="slds-p-around_medium lgc-bg">
+       <lightning-input data-formfield="name" type="text" label="Enter Name"></lightning-input>
+         you have entered name={name}<BR/>
+        <lightning-input data-formfield="lastName" type="text" label="Enter last Name"></lightning-input>
+        you have entered lastname={lastName}<BR/>
+        <lightning-input data-formfield="contactNo" type="text" label="Enter contactNo Name"></lightning-input>
+        you have entered contactNo={contactNo}<BR/>
+        <lightning-input data-formfield="emailID" type="text" label="Enter emailID Name"></lightning-input>
+        you have entered emailID={emailID}<BR/>
+        <lightning-input data-formfield="adress" type="text area" label="Enter adress Name"></lightning-input>
+        you have entered adress={adress}<BR/>
+        today date = <p><lightning-formatted-date-time value="1547250828000"></lightning-formatted-date-time></p>
+       
+       <lightning-button variant="brand" label="Save" title="Primary action" onclick={handlerButtom} class="slds-m-left_x-small"></lightning-button>
+       
+      </div>
+    </lightning-card>
+ </template>

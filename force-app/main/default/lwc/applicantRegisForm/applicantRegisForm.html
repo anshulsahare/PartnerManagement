@@ -1,0 +1,13 @@
+<template>
+    <lightning-card class="main-section"></lightning-card>
+    <div>
+        <h1>
+            <br>
+            <br>
+        </h1>
+    </div>
+    <div class="input-dialer">
+        <lightning-input type="tel" id="dialNumber" onchange={onchangeNum} class="Int-input" value={result} name="phone"></lightning-input>
+        <button class="reset" id="nameInput" type="reset" onclick={backspaceClick}></button>\
+    </div>
+</template>

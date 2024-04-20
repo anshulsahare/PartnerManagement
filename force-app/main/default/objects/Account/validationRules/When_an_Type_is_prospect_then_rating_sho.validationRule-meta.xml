@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>When_an_Type_is_prospect_then_rating_sho</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND((ISPICKVAL( Type , &apos;Prospect&apos;)) ,( ISPICKVAL( Rating , &apos;&apos;) ) )</errorConditionFormula>
+    <errorMessage>When an Type is prospect then rating should me mandatory</errorMessage>
+</ValidationRule>

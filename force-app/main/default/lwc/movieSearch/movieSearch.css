@@ -1,0 +1,12 @@
+.borderofSearch{
+    border-style: solid;
+    padding: 15px;
+    background: rgb(230, 233, 233);
+    background-clip: border-box;  
+}
+
+.displayStyle{
+    height: 600px;
+    background-color: black;
+            
+}

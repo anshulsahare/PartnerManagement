@@ -1,0 +1,19 @@
+<template>
+<lightning-card title="My Calculator">
+    <div>
+    <lightning-input type="number" label="Enter first number" placeholder="Enter your first difit" onchange={numOne}></lightning-input><br>
+    <lightning-input type="number" label="Enter second number" placeholder="Enter your last digit" onchange={numTwo}></lightning-input><br>
+</div>
+<div>
+    <lightning-button variant="brand" label="Addition" onclick={adding}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="brand" label="Substraction" onclick={Subtracting}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="brand" label="Multiple" onclick={Multiplication}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="brand" label="Division" onclick={Division}></lightning-button>&nbsp;&nbsp;
+</div>
+<div>
+    <template if:true={valueStore}>
+      <b style="color: red;">Your Result is : {Result}</b>
+    </template>
+</div>
+   </lightning-card>
+</template>

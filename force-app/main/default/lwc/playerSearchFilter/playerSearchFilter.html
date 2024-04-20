@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title="Hello Team">
+        <lightning-button label='Create Cricketer'
+                          onclick={createCricketer}
+                          slot='actions'>
+        </lightning-button>
+        <div class="slds-align_absolute-center">
+            <lightning-combobox
+                label="Select Cricketer Nationality"
+                value={selectedCricketerNationality}
+                options={optionArry}
+                onchange={handleChangePicklist}>
+            </lightning-combobox>
+        </div>
+
+        <template if:true={selectedPlayerName}>
+            <div class='slds-align_absolute-center'>
+                <p>Selected Player Name : {selectedPlayerName}</P>
+            </div>
+        </template>
+        
+
+        <!--Taking custom event from hild into parent-->
+        <c-player-search-result onselect={handleCustomEvent}>
+        
+        </c-player-search-result>
+
+    </lightning-card>
+</template>

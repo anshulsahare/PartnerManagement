@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Account Record form">
+        <lightning-layout vertical-align="centre">
+            <lightning-layout-item padding="around:small">
+                <template for:each={accRecord} for:item="acc">
+                   <p key={acc.id} ></p>
+                   {acc.id}
+                </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    
+</template>

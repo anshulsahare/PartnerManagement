@@ -1,0 +1,42 @@
+.container{
+	background-color: black;
+	max-width: 1200px;
+	block-size: 600px;
+    writing-mode:horizontal-tb;
+}
+
+.movie-poster img{
+  max-width: 200px;
+  border: 2px solid white;
+  border-radius: 6px;
+  margin-left: 5px;
+}
+
+.movie-title{
+	font-size: 2rem;
+	color: yellow;
+	text-align: center;
+	
+}
+
+.movie-info{
+	display: table;
+	color: whitesmoke;
+	
+}
+.movie-info >div{
+	display: table-row;
+}
+.movie-info > div span{
+	display: table-cell;
+	padding-right: 5px;
+}
+.movie-info >div span:nth-child(-n+2){
+	font-weight: bold;
+}
+.movie-info >div span:last-child{
+	padding-right: 0 ;
+}
+.plot-class{
+  text-align: justify;
+}

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Appplicant Form">
+        <lightning-input type="text" label="Enter Applicant Id" data-formfield="appliName"></lightning-input></br>
+        <lightning-button variant="Brand" label="Search" onclick={appliSearchButton}></lightning-button></br>
+        Id = {appliVar.Id}
+        First Name= {appliVar.First_Name__c}</br>
+        Last Name= {appliVar.Last_Name__c}</br>
+        Email Id= {appliVar.Email_Id__c}</br>
+        Phone= {appliVar.Phone_Number__c}</br>
+    </lightning-card>
+</template>

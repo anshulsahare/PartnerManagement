@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Insurance_period__c</fullName>
+    <externalId>false</externalId>
+    <label>Insurance period</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10 years</fullName>
+                <default>false</default>
+                <label>10 years</label>
+            </value>
+            <value>
+                <fullName>20 years</fullName>
+                <default>false</default>
+                <label>20 years</label>
+            </value>
+            <value>
+                <fullName>30 years</fullName>
+                <default>false</default>
+                <label>30 years</label>
+            </value>
+            <value>
+                <fullName>3 years</fullName>
+                <default>false</default>
+                <label>3 years</label>
+            </value>
+            <value>
+                <fullName>2 years</fullName>
+                <default>false</default>
+                <label>2 years</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>leadSource_Error</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL( Level__c , &apos;Primary&apos;) , ISPICKVAL( LeadSource , &apos;Web&apos;) )</errorConditionFormula>
+    <errorMessage>IF Level is &quot;Primary&quot; then LeadSource Can not be &quot;Web&quot;</errorMessage>
+</ValidationRule>

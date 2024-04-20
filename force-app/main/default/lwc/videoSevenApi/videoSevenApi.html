@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Salesforce API Track">
+      total record = {numberList};
+      <div style="height : 400px ">
+        <!-- Lightining data table start-->
+          <lightning-datatable
+          key-field="id"
+          data={datastore}
+          columns={coloumnhaiBhai}>
+          </lightning-datatable>
+        <!-- lightning datat able end-->
+      </div>
+    </lightning-card>
+</template>

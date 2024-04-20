@@ -1,0 +1,25 @@
+.title img{
+    width:  140px;
+    height: 190px;
+    padding: 1px;
+    background-position: center;
+    border-radius: 5px;
+    
+}
+
+.title_warpper{
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+}
+
+/* .icon{
+ position: absolute;
+ color: black;
+ size: large;
+} */
+
+.selected{
+ border: 3px solid #1a75ff;
+ border-radius: 0;
+}

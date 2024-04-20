@@ -1,0 +1,55 @@
+<template>
+    <div class="slds-grid navigation">
+       
+       <div class="slds-col slds-size_6-of-12">
+         <h1 class="heading">Amazon.In</h1>
+       </div>
+  
+       <div class="slds-col slds-size_5-of-12">
+         <lightning-layout multiple-rows>
+           <lightning-layout-item size="12" padding="around-small" small-device-size="6"
+              large-device-size="8">
+                <lightning-icon icon-name="action:user"></lightning-icon>
+           </lightning-layout-item>
+
+           <lightning-layout-item size="2" padding="around-small" small-device-size="2"
+             medium-device-size="2" large-device-size="2">
+              <div class="userName">username</div>
+           </lightning-layout-item>
+
+           <lightning-layout-item size="12" padding="around-small" small-device-size="2"
+              medium-device-size="2" large-device-size="2">
+              <div class="slds-p-around_medium lgc-bg">
+                 <lightning-button-menu alternative-text="show-menu">
+                    <lightning-menu-item value="Item one" label="Item one"></lightning-menu-item>
+                    <lightning-menu-item value="Item one" label="Item one"></lightning-menu-item>
+                    <lightning-menu-item value="Item one" label="Item one"></lightning-menu-item>
+                    <lightning-menu-item value="Item one" label="Item one"></lightning-menu-item>
+                 </lightning-button-menu>
+              </div>
+           </lightning-layout-item>
+           
+           <lightning-layout-item size="12" padding="around small" small-device-size="2"
+           medium-device-size="2" large-device-size="2">
+              <div class="custom-box">4</div>
+           </lightning-layout-item>
+         </lightning-layout>
+      </div>
+
+      <div class="slds-col">
+       <lightning-layout multiple-rows>
+         <lightning-layout-item size="12" padding="around-small" small-device-size="6"
+         medium-device-size="6" large-device-size="6">
+            <div class="cart">
+            <lightning-icon icon-name="utility:cart">cart
+            </lightning-icon>
+            </div>
+         </lightning-layout-item>
+
+         <lightning-layout-item size="12" padding="around-small" small-device-size="6"
+          medium-device-size="6" large-device-size="6">Return <span style="font-weight: bold;">& Orders</span></lightning-layout-item>
+        </lightning-layout>
+      </div>
+
+      </div>
+</template>

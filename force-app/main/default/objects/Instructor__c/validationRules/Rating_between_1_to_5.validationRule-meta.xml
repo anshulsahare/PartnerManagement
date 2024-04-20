@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rating_between_1_to_5</fullName>
+    <active>true</active>
+    <errorConditionFormula>Rating__c &gt;5 ||  Rating__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Rating__c</errorDisplayField>
+    <errorMessage>Rating_between_1_to_5</errorMessage>
+</ValidationRule>

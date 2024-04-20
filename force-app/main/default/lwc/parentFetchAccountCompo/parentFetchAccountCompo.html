@@ -1,0 +1,16 @@
+<template>
+ <lightning-layout>
+    <lightning-layout-item padding="around:small" size="2">
+    <lightning-card title="Account TO Contact Recocords">
+         <template for:each={accounts.data} for:item="accObject" for:index="index">
+            <p key={accObject.Id} class="slds-p-horizontal_small">
+              <a href="#" onclick={handleClick} data-accountid={accObject.Id}>{accObject.Name}</a>
+            </p>
+         </template>
+    </lightning-card>
+    <lightning-layout-item padding="around:small" size="10">
+    <c-con-provied-record account-id={accountIdNew}></c-con-provied-record>
+</lightning-layout-item>
+    </lightning-layout-item>
+ </lightning-layout>
+</template>

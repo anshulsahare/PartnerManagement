@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="File Upload and Download">
+        <lightning-input type="file" label="Choose file" accept=".pdf,.png,.jpeg,.jpg" onchange={handleFileChange}></lightning-input>
+        <lightning-button label="Upload File" variant="brand" onclick={handleFileUpload} disabled={isUploading}></lightning-button>
+        <template if:true={fileUploaded}>
+            <a href={fileDownloadLink} download={fileDownloadName}>
+                <lightning-button label="Download File" variant="brand"></lightning-button>
+            </a>
+        </template>
+    </lightning-card>
+</template>

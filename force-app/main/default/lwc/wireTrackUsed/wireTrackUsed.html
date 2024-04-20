@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Wire Decorator">
+        <lightning-input data-formfield="Name" type="text" label="Enter Account Name"></lightning-input><br/>
+        <lightning-button variant="Brand" label="Show" onclick={showHandlerButton} ></lightning-button><br/>
+        <template if:true={flag}>
+        you have enterd = {accObject.Name}
+    </template>
+    </lightning-card>
+</template>

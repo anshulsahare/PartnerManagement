@@ -1,0 +1,13 @@
+<template>
+   <lightning-card title="Lets See Record">
+      <ul class="slds-m-arund_medium">
+       <template for:each={conlistStore.data} for:item="con">
+         <li key={con.Id}>
+            {con.FirstName}<br>
+            {con.LastName}
+         </li>
+         
+       </template>
+      </ul>
+   </lightning-card> 
+</template>

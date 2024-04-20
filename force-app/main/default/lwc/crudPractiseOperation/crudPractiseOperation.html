@@ -1,0 +1,47 @@
+<template>
+ <lightning-card title="CRUD OPERATION">
+    <lightning-button variant="Brand" label="Create" icon-name="utility:save" onclick={createButton}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="Neutral" label="Search" icon-name="utility:search" onclick={searchButton}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="Success" label="Update" icon-name="utility:update" onclick={updateButton}></lightning-button>&nbsp;&nbsp;
+    <lightning-button variant="Destructive" label="Delete" icon-name="utility:delete" onclick={deleteButton}></lightning-button>&nbsp;&nbsp;</br>
+ 
+
+    <lightning-input type="text" label="Enter Apllicant Name" data-fromfield="appliName" value={appliObject.First_Name__c}></lightning-input></br>
+
+     <template if:true={showInputFieldsFlag}>
+    <lightning-input type="Email" label="Enter Apllicant Email" data-fromfield="appliEmail" value={appliObject.Email_Id__c}></lightning-input></br>
+    <lightning-input type="Text" label="Enter Apllicant Pan Number" data-fromfield="appliPan" value={appliObject.Pan_Card__c}></lightning-input></br>
+
+    <lightning-combobox
+            name="ApplicantGendre"
+            label="Gender"
+            value={appliObject.Gender__c}
+            placeholder="Select Gender"
+            options={genderOpt}
+            onchange={genderHandleChange} ></lightning-combobox></br>
+    
+            <lightning-input type="Date" label="Enter Apllicant DOB" data-fromfield="appliDOB" value={appliObject.DOB__c}></lightning-input></br>
+          <template if:true={createNicheButtonFlag}>
+            <lightning-button variant="Brand" label="Create" icon-name="utility:save" onclick={creatSaveeButtonHandler}></lightning-button>
+          </template>
+          </template>
+
+    <template if:true={searhcNIcheButtonHandlerFlag}>
+      <lightning-button variant="Nuetral" label="Search" icon-name="utility:search" onclick={searchSearchButtonHandler}></lightning-button><br>
+    </template>
+
+    <template if:true={uprButtonFlag}>
+    <template if:true={searchIdJsButtonFlag}>
+       First Name = {appliObject.First_Name__c}<BR>
+        Email ID = {appliObject.Email_Id__c}<BR>
+        PAN Number = {appliObject.Pan_Card__c}<BR>
+        Gender = {appliObject.Gender__c}<BR>
+        DOB = {appliObject.DOB__c}<br>
+    </template>
+    </template>
+
+    <template if:true={UpdateNicheHandlerFlag}>
+      <lightning-button variant="Success" label="Update" icon:name="utility:update" onclick={updateUpdateHandlerButton}></lightning-button>
+    </template>
+</lightning-card>
+</template>

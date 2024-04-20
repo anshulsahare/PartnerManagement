@@ -1,0 +1,40 @@
+<template>
+    <lightning-card >
+    <lightning-combobox
+            name="Account Type"
+            label="Select Account Type"
+            value={accountObject.Type}
+            placeholder="Select Progress"
+            options={getOptions}
+            onchange={typeHandleChange} ></lightning-combobox><br/>
+
+                 <template if:true={showTableFlag}>
+            total record Count = {accountRecordShowCount}
+            <table class="slds-table slds-table--bordered slds-table--striped">
+                <thead>
+                    <tr>
+                        <th scope="col"><span class="slds-truncate" >Accoun Name </span></th>
+                        <th scope="col"><span class="slds-truncate">Account Type</span></th>
+                        <th scope="col"><span class="slds-truncate">Account SLA</span></th>
+                        <th scope="col"><span class="slds-truncate">Account CreatedDate</span></th>
+                        <th scope="col"><span class="slds-truncate">Account Rating</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                        <template for:each={accList} for:item="acc">
+                                <tr key={acc.id}>
+                                      <td>{acc.Name} </td> 
+                                      <td>{acc.Type}</td>
+                                      <td>{acc.SLA__c}</td> 
+                                      <td>{acc.Rating}</td> 
+                                      <td>{acc.CreatedDate}</td>   
+                                </tr>
+        
+                         </template>            
+                </tbody>
+        </table>
+    </template>
+
+        </lightning-card>
+</template>

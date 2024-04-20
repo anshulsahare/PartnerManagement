@@ -1,0 +1,13 @@
+.pokemon_card{
+    border: 1px solid;
+    border-radius: 0.25rem;
+    display: block;
+}
+
+.pokemonImg{
+    height: 100px;
+    width: 100px;
+}
+/* .marginOfImg{
+    margin-right: 20px;
+} */

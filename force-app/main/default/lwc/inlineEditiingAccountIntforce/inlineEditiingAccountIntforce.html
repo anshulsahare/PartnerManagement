@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Account Record Inline Editing">
+        <template if:true={accObj.data}>
+            <lightning-datatable key-field="Id">
+            data={accObj.data} 
+            columns={coloumns} 
+            onsave={saveHandleAction}
+            draft-values={fldsItemValues} 
+            hide-checkbox-column 
+            show-row-number-column>
+        </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>

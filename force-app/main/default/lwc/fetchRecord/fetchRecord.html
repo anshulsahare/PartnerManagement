@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Show contact record in table">
+        <lightning-layout vertical-align="centre">
+            <lightning-layout-item padding="around:small">
+               <template for:each={conlist} for:item="con">
+                   <p  key={con.id} ></p>
+                   {con.id} + {con.Name}
+               </template>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card> 
+</template>

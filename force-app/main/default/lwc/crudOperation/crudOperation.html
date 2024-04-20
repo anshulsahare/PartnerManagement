@@ -1,0 +1,48 @@
+<template>
+    <lightning-card title="CRUD Operation">
+        <lightning-button variant="Brand" label="Save" icon-name="utility:save" onclick={saveHandlerButton}></lightning-button> &nbsp;&nbsp;
+        <lightning-button variant="Neutral" label="Search" icon-name="utility:search" onclick={searchHandlerButton}></lightning-button>&nbsp;&nbsp;
+        <lightning-button variant="success" label="Update" icon-name="utility:record_update" onclick={updateHandlerButton}></lightning-button>&nbsp;&nbsp;
+        <lightning-button variant="Destructive" label="Delete" icon-name="utility:delete" onclick={deleteHandlerButton}></lightning-button>&nbsp;&nbsp;<br/>
+        
+       
+        <lightning-input data-formfield="accName" type="text" label="enter ACCOUNT  Name" value={accObject.Name}></lightning-input><br/>
+        
+        <template if:true={showInputFieldFlag}>
+        <lightning-combobox
+        name="Account Type"
+        label="Account Type"
+        value={accObject.Type}
+        placeholder="Select Type"
+        options={typeOptions}
+        onchange={typeHandleChange} ></lightning-combobox><br/>
+
+        <lightning-combobox
+            name="Account SLA"
+            label="Account SLA"
+            value={accObject.SLA__c}
+            placeholder="Select SLA"
+            options={slaOptions}
+            onchange={slaHandleChange} ></lightning-combobox><br/>
+        </template>
+
+        <template if:true={showSaveButtonFlag}>
+    <lightning-button variant="Brand" label="Save" icon-name="utility:save" onclick={createSaveButtonhHandler}></lightning-button>&nbsp;&nbsp;
+     </template>
+
+<template if:true={searchShowButtonFlag}>
+<lightning-button variant="Neutral" label="Search" icon-name="utility:search" onclick={searcNowhHAndlerButton}></lightning-button><br/>
+</template>
+
+<template if:true={showAccountDetaisFlag}>
+    Account Name = {accObject.Name}<br/>
+    Account Type = {accObject.Type}<br/>
+    Account SLA = {accObject.SLA__c}<br/>
+</template>
+
+<template if:true={shopUpdateNowButtonGlag}>
+<lightning-button variant="Brand"  label="record_update" onclick={updateNowButtonHandler}></lightning-button>&nbsp; &nbsp;
+</template>
+
+</lightning-card>
+</template>

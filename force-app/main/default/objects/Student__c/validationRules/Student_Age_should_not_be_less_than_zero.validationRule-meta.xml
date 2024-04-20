@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Student_Age_should_not_be_less_than_zero</fullName>
+    <active>true</active>
+    <errorConditionFormula>Age__c &lt;= 0</errorConditionFormula>
+    <errorDisplayField>Age__c</errorDisplayField>
+    <errorMessage>Student Age should not be less than zero</errorMessage>
+</ValidationRule>

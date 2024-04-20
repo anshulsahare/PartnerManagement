@@ -1,0 +1,21 @@
+.navigation {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.custom-icon {
+    font-size: 15px;
+    /* Adjust the size as needed */
+    color: white;
+}
+
+.custom-icon svg{
+    width: 50px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    fill: red !important;
+}
+
+.custom-navigation-item {
+    color: white;
+}
